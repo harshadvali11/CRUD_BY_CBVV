@@ -1,0 +1,39 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+    <title>School Detail Page</title>
+{% endblock %}
+
+
+
+{% block body_block  %}
+<center>
+    <h1>Detail information of {{schoolobject.sname}} is </h1>
+
+    <h2>{{schoolobject.sname}}</h2>
+    
+    <h2>{{schoolobject.spricipal}}</h2>
+    <h2>{{schoolobject.slocation}}</h2>
+
+    <h1>Students details are</h1>
+    {% for sto in schoolobject.students.all %}
+
+        <h2>Name of the student is {{sto.stname}}</h2>
+        <h2>age of the student is {{sto.stage}}</h2>
+        
+    {% endfor%}
+
+
+
+
+
+
+
+
+
+
+
+    
+</center>
+    
+{% endblock %}
